@@ -20,4 +20,6 @@ public interface TeacherMapper {
 	public List<Teacher> findTeacherByNum(String num);
 
 	public int updateTea(Map map);
+
+	public int deleteTea(String teachno);
 }

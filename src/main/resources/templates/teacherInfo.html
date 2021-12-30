@@ -174,6 +174,35 @@
           }
 	  });
   }
+
+  function deleteStu(arg) {
+      layui.use('table', function () {
+          /*	  var table = layui.table
+                var checkStatus = table.checkStatus('');
+                var num = checkStatus.data[0].stuno;*/
+          var te1 = $(arg).parent();
+          var te2 = te1.parent();
+          var te3 = te2.parent();
+          var te4 = te3.find("td").eq(1).html();
+          var teano = te3.find("td").eq(1).find('div').eq(0).html();
+          /*  var te5 = te4.eq(0).text();
+            var stuno = te5.html();*/
+
+          $.ajax({
+              url: 'deleteTea',
+              data: {'num': teano},
+              type: 'post',
+              success: function (data) {
+                  if (data == "success") {
+                      parent.layer.msg('删除成功！', {icon: 1, time: 2000, shade: 0.2});
+                      location.reload(true);
+                  } else {
+                      parent.layer.msg('删除失败！', {icon: 2, time: 3000, shade: 0.2});
+                  }
+              }
+          });
+      });
+  }
   
   
   

@@ -59,4 +59,8 @@ public class TeacherServiceImpl implements TeacherService{
 		return teacherMapper.updateTea(map);
 	}
 
+	@Override
+	public int deleteTea(String teaNo) {
+		return teacherMapper.deleteTea(teaNo);
+	}
 }

@@ -64,4 +64,8 @@
 		WHERE teachno in (select teachno from (select teachno from teacher where teachno = #{oldNum}) t1 )
 	</update>
 
+	<delete id="deleteTea">
+		delete  from stu where teachno = #{0}
+	</delete>
+
 </mapper>

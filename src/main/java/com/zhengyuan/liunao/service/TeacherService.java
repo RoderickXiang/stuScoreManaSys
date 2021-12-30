@@ -16,4 +16,5 @@ public interface TeacherService {
 	public int teacherCount();
 	public List<Teacher> findTeacherByNum(String num);
 	public int updateTea(Map map);
+	public int deleteTea(String teaNo);
 }
