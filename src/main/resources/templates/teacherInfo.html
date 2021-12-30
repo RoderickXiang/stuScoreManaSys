@@ -64,7 +64,7 @@
    <a title="修改信息 "   onclick="teaModi()" href="javascript:;">
                 <i class="layui-icon">&#xe642;</i>
               </a>
-              <a title="删除"  onclick="deleteStu()" href="javascript:;" lay-event="edit">
+              <a title="删除"  onclick="deleteTea(this)" href="javascript:;" lay-event="edit">
                 <i class="layui-icon">&#xe640;</i>
               </a>
 </script>
@@ -175,7 +175,7 @@
 	  });
   }
 
-  function deleteStu(arg) {
+  function deleteTea(arg) {
       layui.use('table', function () {
           /*	  var table = layui.table
                 var checkStatus = table.checkStatus('');
@@ -185,6 +185,7 @@
           var te3 = te2.parent();
           var te4 = te3.find("td").eq(1).html();
           var teano = te3.find("td").eq(1).find('div').eq(0).html();
+          console.log(teano);
           /*  var te5 = te4.eq(0).text();
             var stuno = te5.html();*/
 
@@ -193,7 +194,7 @@
               data: {'num': teano},
               type: 'post',
               success: function (data) {
-                  if (data == "success") {
+                  if (data === "success") {
                       parent.layer.msg('删除成功！', {icon: 1, time: 2000, shade: 0.2});
                       location.reload(true);
                   } else {

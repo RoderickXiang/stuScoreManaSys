@@ -17,5 +17,10 @@ public class MainTest {
     public void selectTest(){
         System.out.println(teacherService.teacherCount());
     }
+
+    @Test
+    public void deleteTeaTest(){
+        teacherService.deleteTea("t00055");
+    }
 }
 

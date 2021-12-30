@@ -65,7 +65,7 @@
 	</update>
 
 	<delete id="deleteTea">
-		delete  from stu where teachno = #{0}
+		delete from teacher where teachno = #{0}
 	</delete>
 
 </mapper>

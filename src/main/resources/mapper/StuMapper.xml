@@ -45,7 +45,7 @@
 	</delete>
 	
 	<delete id="deleteStu">
-	 	delete  from stu where stuno = #{0}
+	 	delete from stu where stuno = #{0}
 	</delete>
 
 
